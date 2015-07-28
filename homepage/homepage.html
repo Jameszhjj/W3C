@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta HTTP-EQUIV="pragma" content="no-cache"> 
+	<meta HTTP-EQUIV="Cache-Control" content="no-store, must-revalidate"> 
+
+	<title>十禾-辛巴智能推广平台</title>
+	<link href="hp.css" rel="stylesheet" type="text/css">
+
+	<style>
+	*{margin:0;padding:0px;}
+	#show{width:300px;height:200px;display:none;padding:1px;position:absolute;border:1px solid #4c77aa;background:#f2f7fd;zoom:1;}
+	#show h3{background:#4c77aa;color:#fff;font-size:14px;padding:5px;}
+	#show span{position:absolute;right:3px;top:3px;display:block;cursor:pointer;color:#fff;font-weight:bold;}
+	#show p{padding:5px;}
+	#text{font-size:12px;text-indent:2em;line-height:20px;}
+	</style>
+
+	<script type="text/javascript">
+	
+	function block(id){
+        var divD = document.getElementById(id);
+        divD.style.display = "inline-block"
+	}
+	
+	function none(id){
+		var divD = document.getElementById(id);
+		divD.style.display = "none"
+	}
+	
+	function mouseDown(id)
+	{
+		var campaign_div = document.getElementsByClassName('Block');
+		var t = '';
+		for(i = 0; i < campaign_div.length; i++) {
+			t = campaign_div[i].children;
+			t[0].style.backgroundColor= null;
+		}
+		document.getElementById(id).style.backgroundColor="#999";//注意backgroundColor不能写成background-color形式，而且color首字母要大写
+	}
+	/*id的只能用一次是说同一个id在一个页面中只能出现一次，例如页面中有一个元素取id为“naviBar”，那么在这个页面中就不能再为其他元素取“naviBar”这个id了
+      class可以多次引用，是说在一个页面中，可以为多个元素加上同一个名称的class.*/
+	
+	function mouseUp(id)
+	{
+		document.getElementById(id).style.backgroundColor="#eee";
+	}
+	
+	function show(){
+	var iWidth = document.documentElement.clientWidth;
+	var iHeight = document.documentElement.clientHeight;
+	
+	var oShow = document.getElementById('show');
+	oShow.style.display = 'block';
+	oShow.style.left = (iWidth-302)/2+"px";
+	oShow.style.top = (iHeight-202)/2+"px";
+	
+	var oClose = document.createElement("span");
+	oClose.innerHTML = "×";
+	oShow.appendChild(oClose);
+	oClose.onclick = function(){
+	oShow.style.display = 'none';
+	oShow.removeChild(this);
+	}
+	}
+	</script> 
+
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="name"><h1 >十禾-辛巴</h1></div>
+			<div class="middle">
+				<a class="version" href=" ">爆款全能版</a>
+				<br>
+				<span class="target">用心做专业的直通车优化软件 </span>  
+			</div>
+			<div class="right" <style="width:500px;">
+				
+				<div class="msg"><img src="./img/msg.png"/></div>
+				
+				<div class="agent">
+					<img src="./img/agent.png">
+					<span>tp_十禾2</span>代理
+				</div>
+				
+				<div class="seller">
+					<img src="./img/seller.png">
+					<span>wjsxwb</span>
+				</div>
+				
+			</div>
+		</div>
+
+
+		<div class="bodybody">
+			<div class="bodyleft">
+				<div class="choice">
+					<ul class="nav">
+						<li class="nav-li">
+							<a class="nva-a" href="">全部推广计划</a>
+						</li>
+						<li class="nav-a">
+							<div class="quick"><a href="" >快捷功能</a></div>
+							<ul class="nav">
+								<li class="nav-b">
+									<a href="" style="color:#666">无展现词处理</a>
+								</li>
+								<li class="nav-b">
+									<a href="" style="color:#666">关键词批量处理</a>
+								</li>
+							</ul>
+						</li>
+						<li class="nav-li"><a class="nva-a" href="">自动开车</a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="bodyright">
+				<div class="title">
+					<h3 class="pagetitle"> 全部推广计划</h3>
+					<ul >
+						<li class="trend">所有推广计划近期数据走势</li>
+					</ul>
+				</div>
+				<div class="clean"></div>
+				<div class="brleft">
+					<div class="chart">
+						<table class="metrotable overviewtable_plan" cellspacing="0" cellpadding="0" border="0" width="100%">
+							<colgroup>
+								<col class="con1" width="15%">
+								<col class="con0" width="10%">
+								<col class="con1" width="15%">
+								<col class="con0" width="15%">
+								<col class="con1" width="15%">
+								<col class="con0" width="15%">
+								<col class="con1" width="15%">
+							</colgroup>
+							<thead>
+								<tr>
+									<th class="head1">浏览量</th>
+									<th class="head0">点击量</th>
+									<th class="head1">点击率</th>
+									<th class="head0">每点击花费</th>
+									<th class="head1">千次展现花费</th>
+									<th class="head0">总成交笔数</th>
+									<th class="head1">总收藏次数</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td id="impressions_sum" class="indicators">704625</td>
+									<td id="click_sum" class="indicators">2350</td>
+									<td id="ctr_sum" class="indicators">0.33%</td>
+									<td id="cpc_sum" class="indicators">1.03</td>
+									<td id="cpm_sum" class="indicators">3.42</td>
+									<td id="direct_pay_count_sum" class="indicators">2</td>
+									<td id="fav_item_count_sum" class="indicators">67</td>
+								</tr>
+							</tbody>
+						</table>	
+							
+							<div class="filemgr_category" style="margin-top:30px;overflow:hidden;">
+							<ul id="indicators" style="float:left;display:block;">
+								<li class="current">
+								<!-- 	下面是一个弹窗测试，在页面中间显示 -->
+								<a onclick="show(); return false" href="#">花费</a>
+									<div id="show">
+									<h3>弹窗测试</h3>
+									<p id="text">
+									这里是弹窗内容，内容可以是文字、图片等，可以是iframe传进来，也可以用jQuery的load()传进来。<br />--By Junjie.Zhang
+									</p>
+									</div>
+								</li>
+								<li class="current">
+								<a href=" " rel="roi">投入产出比</a>
+								</li>
+								<li class="current">
+								<a href=" " rel="click">点击量</a>
+								</li>
+								<li class="current">
+								<a href=" " rel="cpc">平均点击花费</a>
+								</li>
+								<li>
+								<a href=" " rel="sales">成交</a>
+								</li>
+								<li>
+								<a href=" " rel="impressions">展现量</a>
+								</li>
+								<li>
+								<a href=" " rel="ctr">点击率</a>
+								</li>
+								<li>
+								<a href=" " rel="cpm">千次展现花费</a>
+								</li>
+							</ul>
+								<div style="float:right;">
+									<input id="reportrange" class="time" type="text" value="2015-07-18 到 2015-07-24">
+								</div>
+							</div>
+						<div class="bodybottom">
+							<div class="pic">
+								<img src="./img/chart.png"/ style="width:90%">
+							</div>
+							<div class="earning" >
+								<div class="cost">
+									<span id="cost_sum" class="indicators">407.19</span>
+									<h4>总花费</h4>
+								</div>
+									
+								<div class="sales" style="margin-top:15px;">
+									<span id="sales_sum" class="indicators">633.43</span>
+									<h4>总成交</h4>
+								</div>
+									
+								<div class="roi" style="margin-top:15px;">
+									<span id="roi_sum" class="indicators">1.56</span>
+									<h4>投入产出比</h4>
+								</div>
+							</div>
+						</div>
+						<hr />
+						<div >
+							<table class="metrotable overviewtable_plan" cellspacing="0" cellpadding="0" border="0">
+								<colgroup>
+								<col class="con0" width="10%">
+								<col class="con1" width="15%">
+								<col class="con1" width="7%">
+								<col class="con0" width="15%">
+								<col class="con1" width="8%">
+								<col class="con0" width="8%">
+								<col class="con1" width="8%">
+								<col class="con0" width="8%">
+								<col class="con1" width="8%">
+								<col class="con0" width="8%">
+								<col class="con1" width="5%">
+								</colgroup> 
+								<thead>
+									<tr>
+										<th class="head0">
+										<strong>状态</strong>
+										</th>
+										<th class="head1">
+											<strong>推广计划名称</strong>
+										</th>
+										<th class="head1">
+											<strong>日限额</strong>
+										</th>
+										<th class="head0">
+											<strong>投放平台</strong>
+										</th>
+										<th class="head1">
+											<strong>展现量</strong>
+										</th>
+										<th class="head0">
+											<strong>点击量</strong>
+										</th>
+										<th class="head1">
+											<strong>点击率</strong>
+										</th>
+										<th class="head0">
+											<strong>花费</strong>
+										</th>
+										<th class="head1">
+											<strong>投入产出比</strong>
+										</th>
+										<th class="head0">
+											<strong>点击转化率</strong>
+										</th>
+										<th class="head1">
+											<strong>操作</strong>
+										</th>
+									</tr>
+								</thead>
+								<tbody id="campaign_report">
+									<tr>
+										<td class="green" >
+											<strong>推广中</strong>
+										</td>
+										<td>计划2（十禾辅推）</td>
+										<td>400元</td>
+										<td>计算机 移动设备</td>
+										<td>148503</td>
+										<td>624</td>
+										<td>0.42%</td>
+										<td>￥647.59</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="green">
+											<strong>推广中</strong>
+										</td>
+										<td>春秋</td>
+										<td>400元</td>
+										<td>计算机 移动设备</td>
+										<td>111338</td>
+										<td>246</td>
+										<td>0.22%</td>
+										<td>￥437.57</td>
+										<td>0.84</td>
+										<td>0.41</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="orange">
+											<strong>暂停</strong>
+										</td>
+										<td>冬</td>
+										<td>500元</td>
+										<td>计算机 移动设备</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0%</td>
+										<td>￥0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="green">
+											<strong>推广中</strong>
+										</td>
+										<td>计划3（十禾全店测试）</td>
+										<td>150元</td>
+										<td>计算机 移动设备</td>
+										<td>36668</td>
+										<td>77</td>
+										<td>0.21%</td>
+										<td>￥82.39</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+										</tr>
+										<tr>
+										<td class="orange">
+										<strong>暂停</strong>
+										</td>
+										<td>冬二</td>
+										<td>500元</td>
+										<td>计算机 移动设备</td>
+										<td>0</td>
+										<td>0</td>
+										<td>0%</td>
+										<td>￥0</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="green">
+											<strong>推广中</strong>
+										</td>
+										<td>新推</td>
+										<td>100元</td>
+										<td>计算机 移动设备</td>
+										<td>17474</td>
+										<td>40</td>
+										<td>0.23%</td>
+										<td>￥73.45</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="green">
+											<strong>推广中</strong>
+										</td>
+										<td>计划1（十禾主推）</td>
+										<td>800元</td>
+										<td>计算机 移动设备</td>
+										<td>369897</td>
+										<td>1320</td>
+										<td>0.36%</td>
+										<td>￥1135.37</td>
+										<td>0.3</td>
+										<td>0.08</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+									</tr>
+									<tr>
+										<td class="green">
+											<strong>推广中</strong>
+										</td>
+										<td>春秋一</td>
+										<td>600元</td>
+										<td>计算机 移动设备</td>
+										<td>34168</td>
+										<td>86</td>
+										<td>0.25%</td>
+										<td>￥76.92</td>
+										<td>0</td>
+										<td>0</td>
+										<td>
+											<a href="http://simba.shelpe.com/campaign/manage?campaign_id=2250372">管理</a>
+										</td>
+										</tr>
+									</tbody>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>	
+				</div>	
+				<div class="brright">
+					<div class="overview">	
+						<div class="outcome">
+							<div class="one_half" style="width:30%">
+								<h4>昨日费用</h4>
+								<h2>0元</h2>
+							</div>
+							<div class="one_half" style="width:30%">
+								<h4>实时扣费</h4>
+								<h2>169.38元</h2>
+							</div>
+							<div class="one_half last alignright" style="width:30%">
+								<h4>账户余额</h4>
+								<h2>211.23元</h2>
+							</div>
+						</div>
+					</div>
+					
+					<div class="nowplan">
+						<h3>正在推广中的计划</h3>
+						<hr style="size:1px;"color=#FB9337/>
+					</div>
+					<div style="margin-top:20px;">
+						<ul class="menuright" id="campaign_list">
+						
+							<li class="current">
+							<a href=" ">全部推广计划</a>
+							</li>
+						
+							<div class="Block"  onmouseover="block('Button1')" onmouseout="none('Button1')" >
+								<li id="p1" onmousedown="mouseDown(id)"><a href=" " class="lili">计划2(十禾辅推)</a> <input id="Button1" class="Button1" style="display: none;" value="管理" type="button"></li>
+							</div> 
+		
+					
+							<div class="Block" onmouseover="block('Button2')" onmouseout="none('Button2')">
+								<li id="p2" onmousedown="mouseDown(id)"><a href=" " class="lili">春秋</a><input id="Button2" class="Button2" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+					
+							<div class="Block" onmouseover="block('Button3')" onmouseout="none('Button3')">
+								<li id="p3" onmousedown="mouseDown(id)"><a href=" "class="lili">冬</a><input id="Button3" class="Button3" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+							
+							<div class="Block" onmouseover="block('Button4')" onmouseout="none('Button4')">
+								<li id="p4" onmousedown="mouseDown(id)"><a href=" "class="lili">计划3（十禾全店测试）</a><input id="Button4" class="Button4" style="display: none;" value="管理" type="button"></li>	
+							</div>
+							
+							<div class="Block" onmouseover="block('Button5')" onmouseout="none('Button5')">
+								<li id="p5" onmousedown="mouseDown(id)"><a href=" "class="lili">冬二</a><input id="Button5" class="Button5" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+							
+							<div class="Block" onmouseover="block('Button6')" onmouseout="none('Button6')">
+								<li id="p6" onmousedown="mouseDown(id)"><a href=" "class="lili">新推</a><input id="Button6" class="Button6" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+							
+							<div class="Block" onmouseover="block('Button7')" onmouseout="none('Button7')">
+								<li id="p7" onmousedown="mouseDown(id)"><a href=" "class="lili">计划1（十禾主推）</a><input id="Button7" class="Button7" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+							
+							<div class="Block" onmouseover="block('Button8')" onmouseout="none('Button8')">
+								<li id="p8" onmousedown="mouseDown(id)"><a href=" "class="lili">春秋一</a><input id="Button8" class="Button8" style="display: none;" value="管理" type="button"></li>	
+							</div> 
+				
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

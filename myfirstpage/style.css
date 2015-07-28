@@ -1,0 +1,84 @@
+*{padding:0px;margin:0px;}
+h1
+{
+color:red
+}
+
+h3
+{
+font-size: 20px;
+}
+
+a {
+    color: #666;
+    outline: medium none;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fb9337;
+}
+
+.header{
+	height:60px;
+	padding-left:10px;
+}
+.header .name{
+	display: inline-block;
+	width:200px;
+	line-height:60px;
+}
+
+.header .target{
+	display: inline-block;
+	line-height:60px;
+}
+
+.header  .logo{
+	display: inline-block;
+	float:right;
+}
+.body{
+}
+.left {
+	width:200px;
+	display:inline-block;
+	float:left;
+	padding-left:10px
+}
+
+.right{
+	margin-top:100px;
+	width:100%;
+	text-align:center;
+	display:inline-block;
+}
+.right.logo{
+	margin-bottom:10px;
+}
+
+.input input {
+	margin-bottom:10px;
+}
+
+.login{
+	margin-top:20px;
+}
+.login-admin{
+	margin-bottom:20px; 
+}
+.loginadmin{
+	margin-top:20px; 
+	font-family: "Î¢ÈíÑÅºÚ","Microsoft YaHei","ºÚÌå",Arial,Helvetica,sans-serif;
+}
+.loginadmin:hover{
+color: red;
+background:gray;
+}
+.bottom{
+	padding-top:50px;
+	width:100%;
+	height:10px;
+	text-align:center;
+}
+
